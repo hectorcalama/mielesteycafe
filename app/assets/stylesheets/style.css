@@ -1,0 +1,58 @@
+body {
+    font-family: Helvetica, Geneva, Arial, sans-serif;
+    font-size: small;
+    color: #000;
+    background-color: #ebd6ac;
+    }
+a:link, a:active, a:visited {
+    color: #CD0000;
+    }
+input { 
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color:blanchedalmond
+    }
+p { 
+    line-height: 150%;
+    display: inline-table;
+    }
+div#container {
+    width: 100%;
+    margin: 10px;
+    margin-left: 30px;
+    margin-right: 0px;
+    }
+header#header {
+    text-align: center;
+    padding-bottom: 1px;
+    padding-top: 10px;
+    padding-right: 5px;
+    }
+div#content {
+    float: left;
+    width: 450px;
+    padding: 10px;
+    }
+div#content h3 {
+    margin-top: 15px;
+    }
+div#sidebar {
+    width: 200px;
+    margin-left: 480px;
+    }
+
+#recipes_title {
+    text-align: center;
+}
+
+footer {
+    text-align: center; 
+    font-family: 'Titillium Web', sans-serif; 
+}
+
+#precio {
+    text-align: right;
+    font-family: 'Franklin Gothic','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: maroon;
+    font-weight: bold;
+}

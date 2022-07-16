@@ -1,0 +1,48 @@
+<!-- <h1>Webs#privado</h1>
+<p>Find me in app/views/webs/privado.html.erb</p> -->
+
+<div class="textoimagen">
+    <%= image_tag("Brochazo01.png", size: "550x55") %>
+    <div class="textosobre"> <font  color="navajowhite" face="Titillium Web" style=font-size:200%>Ofertas Exclusivas</font></div>
+</div></b>
+
+<style>
+.textoimagen{
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.textosobre{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    right: -15%;
+    transform: translate(-50%, -50%);
+}
+</style>
+
+<div class="row">
+
+<% @productos.each do |p| %>
+<div class="col-6 col-md-2" style="margin: 10px;">
+
+    <div class="card p-1" style="width: 13rem;">
+        <%= image_tag(p.imagen_producto) %>
+        <div class="card-body">
+            <font color="orangered" face="Titillium Web" style=font-size:150% align="center"> 
+            <p class="card-title"><%= p.nom_producto %></p></font>
+            <font color="black" face="Titillium Web" style=font-size:120% align="center" > 
+            <p class="card-marca"><%= p.marca_producto %></p></font>
+            <font color="black" face="Titillium Web" style=font-size:110% align="center" > 
+            <p class="card-text"><%= p.describe_producto %></p></font>
+            <div id="precio">
+                <!-- console.log(number.toLocaleString('de-DE')) -->
+                <h4>$ <%= Integer(p.precio_venta*(0.01*(100-p.descto_especial))) %></h4>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<% end %>
+</div>

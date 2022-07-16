@@ -1,0 +1,41 @@
+<!--<h1>Dudas Consultas Pedidos... Escríbenos</h1>-->
+<!--p>Find me in app/views/contactos/new.html.erb</p>-->
+
+<div class="textoimagen">
+    <%= image_tag("Brochazo01.png", size: "550x55") %>
+    <div class="textosobre"> <font  color="navajowhite" face="Titillium Web" style=font-size:190%>Consultas, Pedidos, Comentarios... Escríbenos</font></div>
+</div></b>
+
+<style>
+.textoimagen{
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.textosobre{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    right: -15%;
+    transform: translate(-50%, -50%);
+}
+</style>
+
+
+<%= form_for(@contacto) do |f| %>
+<div style="text-align:center">
+<b> <font color="maroon" face="Titillium Web, Arial, Verdana" style=font-size:130%>
+
+    <%= f.label :correo_Electrónico, style: "display: inline-block" %>
+    <%= f.text_field :email %>
+
+    <%= f.label :mensaje, style: "display: inline-block" %>
+    <%= f.text_area :mensaje %>
+</font> </b>
+
+    <div>
+    <br>
+        <%= f.submit %>
+    </div>
+<% end %>
