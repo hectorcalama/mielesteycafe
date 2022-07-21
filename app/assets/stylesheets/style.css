@@ -10,7 +10,7 @@ a:link, a:active, a:visited {
 input { 
     margin-bottom: 5px;
     margin-top: 5px;
-    background-color:blanchedalmond
+    background-color:blanchedalmond;
     }
 p { 
     line-height: 150%;
@@ -19,14 +19,16 @@ p {
 div#container {
     width: 100%;
     margin: 10px;
-    margin-left: 30px;
+    margin-left: 10px;
     margin-right: 0px;
+    text-align: center;
     }
 header#header {
     text-align: center;
     padding-bottom: 1px;
     padding-top: 10px;
-    padding-right: 5px;
+    padding-right: 10px;
+    width: 100%;
     }
 div#content {
     float: left;
@@ -47,7 +49,7 @@ div#sidebar {
 
 footer {
     text-align: center; 
-    font-family: 'Titillium Web', sans-serif; 
+    font-family: Titillium Web, Arial, Verdana; 
 }
 
 #precio {
@@ -55,4 +57,129 @@ footer {
     font-family: 'Franklin Gothic','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: maroon;
     font-weight: bold;
+}
+
+
+.team-boxed {
+  color:#313437;
+  background-color:#ebd6ac;
+  width: 97%;
+}
+
+.team-boxed p {
+  color:brown;
+}
+
+.team-boxed h2 {
+  font-weight:bold;
+  margin-bottom:10px;
+  padding-top:10px;
+  color:maroon;
+}
+
+@media (max-width:767px) {
+  .team-boxed h2 {
+    margin-bottom:15px;
+    padding-top:15px;
+    font-size:24px;
+  }
+}
+
+.team-boxed .intro {
+  font-size:18px;
+  max-width:700px;
+  margin:0 auto;
+}
+
+.team-boxed .intro p {
+  margin-top: 2px;
+  margin-bottom:0;
+  color:maroon;
+  font-family:Titillium Web, Arial, Verdana;
+  font-size:100%
+}
+
+.team-boxed .people {
+  padding:10px 0;
+  color:maroon;
+}
+
+.team-boxed .item {
+  text-align:center;
+}
+
+.team-boxed .item .box {
+  text-align:center;
+  padding:10px;
+  background-color: blanchedalmond;
+  margin-bottom:30px;
+}
+
+.team-boxed .item .name {
+  font-weight:bold;
+  margin-top:28px;
+  margin-bottom:8px;
+  font-family: Titillium Web, Arial, Verdana;
+  font-size:124%;
+  color:maroon;
+}
+
+.team-boxed .item .title {
+  text-transform:uppercase;
+  font-weight:bold;
+  color: orangered;
+  letter-spacing:1px;
+  font-family: Titillium Web, Arial, Verdana;
+  font-size:85%;
+}
+
+.team-boxed .item .description {
+  margin-top:10px;
+  margin-bottom:20px;
+  font-weight:bold;
+  font-family: Titillium Web, Arial, Verdana;
+  font-size:100%;
+  color: maroon;
+}
+
+.team-boxed .item img {
+  max-width:160px;
+}
+
+.team-boxed .social {
+  font-size:18px;
+  color:crimson;
+}
+
+.team-boxed .social a {
+  color:orangered;
+  margin:0 10px;
+  display:inline-block;
+  opacity:0.7;
+}
+
+.team-boxed .social a:hover {
+  opacity:1;
+}
+
+.card {
+  background-color:blanchedalmond;
+}
+.card-body .name {
+  font-weight:bold;
+  color:maroon;
+  margin-top:8px;
+  margin-bottom:10px;
+  font-family: Titillium Web, Arial, Verdana;
+  font-size:112%;
+}
+
+.card-body .title {
+  font-weight:bold;
+  color:orangered;
+  margin-top:5px;
+  margin-bottom:10px;
+  text-align: justify;
+  font-family: Titillium Web, Arial, Verdana;
+  font-size:100%;
 }

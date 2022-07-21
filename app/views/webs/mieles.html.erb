@@ -3,8 +3,8 @@
 
 
 <div class="textoimagen"><b>
-    <%= image_tag("Brochazo01.png", size: "550x55") %>
-    <div class="textosobre"> <font  color="navajowhite" face="Titillium Web" style=font-size:200%>Mieles</font></div>
+    <%= image_tag("Brochazo01.png", size: "500x45") %>
+    <div class="textosobre"> <font  color="blanchedalmond" face="Titillium Web" style=font-size:170%>Mieles</font></div>
 </b></div>
 
 <style>
@@ -39,7 +39,7 @@
             <p class="card-text"><%= p.describe_producto %></p></font>
             <div id="precio">
                 <!-- console.log(number.toLocaleString('de-DE')) -->
-                <h4>$ <%= p.precio_venta %></h4>
+                <h4>$ <%= number_with_delimiter(p.precio_venta, delimiter: ".") %></h4>
             </div>
         </div>
     </div>

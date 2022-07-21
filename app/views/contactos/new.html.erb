@@ -2,8 +2,8 @@
 <!--p>Find me in app/views/contactos/new.html.erb</p>-->
 
 <div class="textoimagen">
-    <%= image_tag("Brochazo01.png", size: "550x55") %>
-    <div class="textosobre"> <font  color="navajowhite" face="Titillium Web" style=font-size:190%>Consultas, Pedidos, Comentarios... Escríbenos</font></div>
+    <%= image_tag("Brochazo01.png", size: "500x45") %>
+    <div class="textosobre"> <font  color="blanchedalmond" face="Titillium Web" style=font-size:170%>Consultas, Pedidos, Comentarios... Escríbenos</font></div>
 </div></b>
 
 <style>
@@ -24,18 +24,25 @@
 
 
 <%= form_for(@contacto) do |f| %>
-<div style="text-align:center">
-<b> <font color="maroon" face="Titillium Web, Arial, Verdana" style=font-size:130%>
+    <div style="text-align:left">
+    <font font-weight="bold" color="maroon" face="Titillium Web, Arial, Verdana" style=font-size:130%>
 
-    <%= f.label :correo_Electrónico, style: "display: inline-block" %>
-    <%= f.text_field :email %>
+        <!-- <%= f.label :Correo_Electrónico %>
+        <input type="email" class="form-control" placeholder="nombre@dominio.cl" style="background-color:blanchedalmond" f.text_field="email">
 
-    <%= f.label :mensaje, style: "display: inline-block" %>
-    <%= f.text_area :mensaje %>
-</font> </b>
+        <%= f.label :mensaje %>
+        <textarea class="form-control" id="f.text_area" rows="3" cols="161" style="background-color:blanchedalmond"> </textarea>
+        <%= f.text_area :mensaje %> -->
 
+        <%= f.label :Correo_Electrónico, style: "display: block", type: "email", class: "form-control", placeholder: "nombre@dominio.cl", style: "background-color:blanchedalmond" %>
+        <%= f.text_field :email %>
+    
+        <%= f.label :mensaje, style: "display: block" %>
+        <%= f.text_area :mensaje %>
+    
+        <div>
+            <button type="submit" class="btn btn-warning" style="margin-top:10px">Enviar mensaje </button>
+        </div>
+    </font>
     <div>
-    <br>
-        <%= f.submit %>
-    </div>
 <% end %>

@@ -15,7 +15,7 @@ class ContactosController < ApplicationController
       if @contacto.save
         format.html { redirect_to contacto_url(@contacto),
                       notice: "Agradecemos tu mensaje... A la brevedad responderemos tu requerimiento" }
-        format.json { render :show, status: :created, location: @contacto }
+                      format.json { render :show, status: :created, location: @contacto }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @contacto.errors, status: :unprocessable_entity }
