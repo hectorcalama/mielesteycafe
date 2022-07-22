@@ -4,25 +4,30 @@ body {
     color: #000;
     background-color: #ebd6ac;
     }
+    
 a:link, a:active, a:visited {
     color: #CD0000;
     }
+
 input { 
     margin-bottom: 5px;
     margin-top: 5px;
     background-color:blanchedalmond;
     }
+
 p { 
     line-height: 150%;
     display: inline-table;
     }
+
 div#container {
-    width: 100%;
-    margin: 10px;
-    margin-left: 10px;
+    width: 97%;
+    margin: -10px;
+    margin-left: 0px;
     margin-right: 0px;
     text-align: center;
     }
+
 header#header {
     text-align: center;
     padding-bottom: 1px;
@@ -30,14 +35,17 @@ header#header {
     padding-right: 10px;
     width: 100%;
     }
+
 div#content {
     float: left;
     width: 450px;
     padding: 10px;
     }
+
 div#content h3 {
     margin-top: 15px;
     }
+
 div#sidebar {
     width: 200px;
     margin-left: 480px;
@@ -52,13 +60,36 @@ footer {
     font-family: Titillium Web, Arial, Verdana; 
 }
 
+.card-title{
+  color: #C70039;
+  font-family: Titillium Web, Arial, Verdana;
+  font-size: 140%;
+  text-align: center;
+  font-weight:bold;
+}
+
+.card-marca{
+  color: limegreen;
+  font-family: Titillium Web;
+  font-size: 130%;
+  align: center;
+  font-weight:bold;
+}
+
+.card-text{
+  color: black;
+  font-family: Titillium Web;
+  font-size: 100%;
+  align: center;
+  font-weight:bold;
+}
+
 #precio {
     text-align: right;
     font-family: 'Franklin Gothic','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: maroon;
+    color: orangered;
     font-weight: bold;
 }
-
 
 .team-boxed {
   color:#313437;
@@ -165,13 +196,14 @@ footer {
 .card {
   background-color:blanchedalmond;
 }
+
 .card-body .name {
   font-weight:bold;
   color:maroon;
   margin-top:8px;
   margin-bottom:10px;
   font-family: Titillium Web, Arial, Verdana;
-  font-size:112%;
+  font-size:108%;
 }
 
 .card-body .title {
@@ -182,4 +214,85 @@ footer {
   text-align: justify;
   font-family: Titillium Web, Arial, Verdana;
   font-size:100%;
+}
+
+.form-control {
+  font-weight:bold;
+  background-color:blanchedalmond;
+  font-family: Titillium Web, Arial, Verdana;
+}
+
+.btn {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight:bold;
+  font-size:95%;
+  font-family: Titillium Web, Arial, Verdana;
+  text-align: center;
+  color:maroon;
+}
+
+.col-sm-1{
+  margin-top: 10px;
+  margin-right: 100px;
+}
+
+.p-2 {
+  width: 11rem;
+}
+
+.textoimagen{
+  position: relative;
+  display: block;
+  left: 5%;
+  text-align: center;
+}
+
+.textosobre{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  right: -15%;
+  transform: translate(-50%, -50%);
+}
+
+.textosobre2{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  right: -15%;
+  transform: translate(-50%, -50%);
+}
+
+.container-fluid{
+  font-weight: bold;
+  display: inline-block;
+  font-family: Titillium Web, Arial, Verdana;
+  color:maroon;
+}
+
+.nuevalabel{
+  margin-top: 10px;
+  font-weight: bold;
+  display: block;
+  font-size:120%;
+  font-family: Titillium Web, Arial, Verdana;
+  color:maroon;
+  text-align: left;
+  margin-left: 430px;
+}
+
+.nuevacont{
+  font-weight: bold;
+  display: block;
+  font-family: Titillium Web, Arial, Verdana;
+  color:maroon;
+  text-align: left;
+  margin-left: 0px;
+}
+
+.nuevabut{
+    font-weight: bold;
+    font-family: "Titillium Web";
+    font-size: 120%;
 }

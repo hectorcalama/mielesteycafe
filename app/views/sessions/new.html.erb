@@ -1,0 +1,23 @@
+<div class="textoimagen">
+    <%= image_tag("Brochazo01.png", size: "500x45") %>
+    <div class="textosobre2"> <font  color="blanchedalmond" face="Titillium Web" style=font-size:170%>Iniciar Sesión</font></div>
+</div>
+
+<form action="/sessions" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <div class="nuevalabel">
+        <label for="email_usuario">Correo Electrónico:</label>
+        <div class="nuevacont">
+            <input type="text" id="email_usuario" name = "email_usuario">
+        </div>
+    </div>
+    <div class="nuevalabel">
+        <label for="password">Password:</label>
+        <div class="nuevacont">
+            <input type="password" id="password" name = "password">
+        </div>
+    </div>
+    <div class="nuevabut">
+        <input type="submit" name="Log In" value="Ingresar">
+    </div>
+</form>

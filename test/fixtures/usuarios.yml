@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ci_usuario: 1
+  dv_usuario: MyString
+  nombre_usuario: MyString
+  apellidos_usuario: MyString
+  fechanac_usuario: 2022-07-22
+  telefono_usuario: MyString
+  email_usuario: MyString
+  imagen_usuario: MyString
+  domicilio_usuario: MyString
+  region_usuario: MyString
+  comuna_usuario: MyString
+  tipo_usuario: MyString
+  password_digest: <%= BCrypt::Password.create("secret") %>
+  vigencia_usuario: false
+
+two:
+  ci_usuario: 1
+  dv_usuario: MyString
+  nombre_usuario: MyString
+  apellidos_usuario: MyString
+  fechanac_usuario: 2022-07-22
+  telefono_usuario: MyString
+  email_usuario: MyString
+  imagen_usuario: MyString
+  domicilio_usuario: MyString
+  region_usuario: MyString
+  comuna_usuario: MyString
+  tipo_usuario: MyString
+  password_digest: <%= BCrypt::Password.create("secret") %>
+  vigencia_usuario: false

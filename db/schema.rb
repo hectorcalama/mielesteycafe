@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_14_061449) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_22_042233) do
   create_table "contactos", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email"
     t.text "mensaje"
@@ -30,6 +30,25 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_14_061449) do
     t.integer "precio_venta"
     t.integer "descto_especial"
     t.boolean "vigencia_producto"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "usuarios", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "ci_usuario"
+    t.string "dv_usuario"
+    t.string "nombre_usuario"
+    t.string "apellidos_usuario"
+    t.date "fechanac_usuario"
+    t.string "telefono_usuario"
+    t.string "email_usuario"
+    t.string "imagen_usuario"
+    t.string "domicilio_usuario"
+    t.string "region_usuario"
+    t.string "comuna_usuario"
+    t.string "tipo_usuario"
+    t.string "password_digest"
+    t.boolean "vigencia_usuario"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

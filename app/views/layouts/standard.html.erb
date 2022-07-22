@@ -39,8 +39,8 @@
                 <b> <font color="maroon" face="Titillium Web" style=font-size:100%>+569 5136 8576</font>
                 <%= image_tag("Logowhat01.jpg", size: "30x30") %><br><br>
 
-                <a href="javascript: history.go(-1)" <font color="maroon" face="Titillium Web" style=font-size:100% class="btn btn-warning">Pág. Anterior</font></a>
-
+                <a href="javascript: history.go(-1)" class="btn btn-warning">Pág. Anterior</a>
+                <!-- <a href="javascript: history.go(-1)" <font color="maroon" face="Titillium Web" style=font-size:100% class="btn btn-warning">Pág. Anterior</font></a> -->
             </div>
 
             <div>
@@ -85,13 +85,13 @@
                 
                 <div align="center"><%= image_tag("Te01.ico", size: "40x30") %>
                     <b><font color="maroon" face="Titillium Web" style=font-size:100%>
-                    <a class="nav-link" href="/webs/tes">Tés Hojas Granel y Bolsitas</a></b>
+                    <a class="nav-link" href="/webs/tes">Tés Granel y Bolsitas</a></b>
                     </font>
                 </div>
                 
                 <div align="center"><%= image_tag("Snack01.ico", size: "40x30") %>
                     <b><font color="maroon" face="Titillium Web" style=font-size:100%>
-                    <a class="nav-link" href="/webs/snacks">Snacks Maní Sufles</a></b>
+                    <a class="nav-link" href="/webs/snacks">Snacks y Refrigerios</a></b>
                     </font>
                 </div>
                 
@@ -121,9 +121,33 @@
                 
                 <div align="center"><%= image_tag("Restringe01.ico", size: "40x30") %>
                     <b><font color="maroon" face="Titillium Web" style=font-size:100%>
-                    <a class="nav-link" href="/webs/privado">Clientes Registrados</a></b>
+                    <a class="nav-link" href="/webs/privado">Control y Gestión</a></b>
                     </font>
                 </div>
+
+                <% if not usuario_actual %>
+                    <form class="d-flex" action="/sessions/new" method="get">
+                        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                        <input type="hidden" name="_method" value="new">
+                        <input type="submit" class="btn btn-outline-success" value="Iniciar Sesión">
+                    </form>
+                <% end %>
+
+                <% if usuario_actual %>
+                    <div display="block">
+                        <form action="/usuarios/<%=usuario_actual.id%>" method="get">
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                            <input type="hidden" name="_method" value="new">
+                            <input type="submit" class="btn btn-warning" value="Zona Clientes">
+                        </form>
+
+                        <form action="/sessions/<%=usuario_actual.id%>" method="post">
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                            <input type="hidden" name="_method" value="delete">
+                            <input type="submit" class="btn btn-outline-danger" value="Cerrar Sesión">
+                        </form>
+                    </div>
+                <% end %> 
 
             </div>
             </div>
@@ -131,10 +155,18 @@
         </nav>
 
         <div class="container-fluid" id="container">
+            <% flash.each do |type, msg| %>
+                <div class="alert alert-warning d-flex align-items-center alert-dismissible fade show" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="20" height="20" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <div>
+                        <%= msg %>
+                    </div>
+                </div>
+            <% end %>
             <%= yield -%>
         </div>
-
-       
+    
     </div>
 
     <footer>
