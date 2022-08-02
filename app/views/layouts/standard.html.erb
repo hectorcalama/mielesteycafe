@@ -16,15 +16,31 @@
 <body 
     <div class="container-fluid">
         <header id = "header">
-        <div>
-            <div style="float: left">
-                <%= image_tag("LogoEntreMielesTeCafe001.png", size: "140x140") %> 
+        <div style="float: left">
+            <div>
+                <div style="float: left">
+                    <%= image_tag("LogoEntreMielesTeCafe001.png", size: "140x140") %> 
+                </div>
+            </div>    
+            <div>
+                <div id="resultado">
+
+                </div>
+                <%= form_tag "/buscars/create", method: :get do %>
+                <%= text_field_tag :keyword, nil, style:"margin-bottom: -8px", placeholder: "¿Que estás buscando?..." %>
+                <div>
+                    <%= content_tag :button, class:"btn btn-outline-warning", style:"--bs-btn-padding-y: 0px", type: :submit do %>
+                    Buscar Producto
+                    <% end %>
+                </div>
+                <% end %>
             </div>
-            <div style="float: right" >
+        </div>
+
+            <div style="float: right">
                 <%= image_tag("Logoinsta01.jpg", size: "30x30") %>
                 <a class="text-muted" href="https://www.instagram.com/entremielesycafe/" target="_blank">
                 <b> <font color="maroon" face="Titillium Web" style=font-size:100%>Entre Mieles Té y Café</font><br></a>
-                
                 
                 <a class="text-muted" href="https://www.facebook.com/entremielesycafe" target="_blank">
                 <b> <font color="maroon" face="Titillium Web" style=font-size:100%>Entre Mieles Té y Café</font>
@@ -37,10 +53,10 @@
 
                 
                 <b> <font color="maroon" face="Titillium Web" style=font-size:100%>+569 5136 8576</font>
-                <%= image_tag("Logowhat01.jpg", size: "30x30") %><br><br>
+                <%= image_tag("Logowhat01.jpg", size: "30x30") %><br>
 
-                <a href="javascript: history.go(-1)" class="btn btn-warning">Pág. Anterior</a>
-                <!-- <a href="javascript: history.go(-1)" <font color="maroon" face="Titillium Web" style=font-size:100% class="btn btn-warning">Pág. Anterior</font></a> -->
+                <a href="javascript: history.go(-1)" class="btn btn-outline-dark">Pág. Anterior</a>
+
             </div>
 
             <div>
@@ -126,25 +142,43 @@
                 </div>
 
                 <% if not usuario_actual %>
+                <div>
                     <form class="d-flex" action="/sessions/new" method="get">
-                        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                        <input type="hidden" name="_method" value="new">
-                        <input type="submit" class="btn btn-outline-success" value="Iniciar Sesión">
+                        <div class="inicia">
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                            <input type="hidden" name="_method" value="new">
+                            <input type="submit" class="btn btn-outline-success" value="Iniciar Sesión">
+                        </div>
                     </form>
+
+                    <form class="d-flex" action="/registros/new" method="get">
+                        <div class="registra">
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                            <input type="hidden" name="_method" value="new">
+                            <input type="submit" class="btn btn-outline-danger" value="  Regístrate  ">
+                        </div>
+                    </form>
+                </div>
+
+
                 <% end %>
 
                 <% if usuario_actual %>
-                    <div display="block">
+                    <div>
                         <form action="/usuarios/<%=usuario_actual.id%>" method="get">
-                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                            <input type="hidden" name="_method" value="new">
-                            <input type="submit" class="btn btn-warning" value="Zona Clientes">
+                            <div class="zona">
+                                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                                <input type="hidden" name="_method" value="new">
+                                <input type="submit" class="btn btn-warning" value="Zona Clientes">
+                            </div>
                         </form>
 
                         <form action="/sessions/<%=usuario_actual.id%>" method="post">
-                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                            <input type="hidden" name="_method" value="delete">
-                            <input type="submit" class="btn btn-outline-danger" value="Cerrar Sesión">
+                            <div class="cierra">
+                                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                                <input type="hidden" name="_method" value="delete">
+                                <input type="submit" class="btn btn-outline-danger" value="Cerrar Sesión">
+                            </div>
                         </form>
                     </div>
                 <% end %> 
@@ -171,7 +205,7 @@
 
     <footer>
         <br>
-        <font color="maroon" style=font-size:120%> <b>Desarrollado por Héctor Chandía Concha - Asesoría Carlos García<b> </font><br>
+        <font color="maroon" style=font-size:120%> <b>Desarrollado por Héctor Chandía Concha - Asesoría Carlos García B.<b> </font><br>
         <font color="brown" face="Titillium Web" style=font-size:100%> Aplicación Powered by Ruby on Rails </font>
         <font color="firebrick" style=font-size:100%> <b>Versión 1.0 - Calama julio de 2022<b> </font>
         <br>

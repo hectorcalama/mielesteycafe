@@ -1,5 +1,5 @@
 class ContactosController < ApplicationController
-  layout 'standard'
+  layout "standard"
 
   def index
   end
@@ -25,4 +25,5 @@ class ContactosController < ApplicationController
 
   def show
   end
+
 end

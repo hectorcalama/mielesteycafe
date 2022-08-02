@@ -1,12 +1,14 @@
-<% if usuario_actual %>
-        <b><font color="maroon" face="Titillium Web" style=font-size:200%>
-        <p>Bienvenido <%= @user.nombre_usuario %> <%= @user.apellidos_usuario %> <%= image_tag(@user.imagen_usuario, size: "55x60") %></p></b></font>
-   
-<!--AQUI SE COLOCA EL CONTENIDO PRIVADO -->
+<div class="zonaid">
+    <% if usuario_actual %>
+            <b><font color="maroon" face="Titillium Web" style=font-size:150% >
+            <p>Bienvenido <img class="rounded-circle" <%= image_tag(@user.imagen_usuario, size: "50x55") %> <%= @user.nombre_usuario %> <%= @user.apellidos_usuario %> </p></b></font>
 
-<div class="textoimagen">
-    <%= image_tag("Brochazo01.png", size: "500x45") %>
-    <div class="textosobre2"> <font  color="blanchedalmond" face="Titillium Web" style=font-size:170%>Ofertas Exclusivas</font></div>
+    <!--AQUI SE COLOCA EL CONTENIDO PRIVADO -->
+
+    <div class="textoimagen">
+        <%= image_tag("Brochazo01.png", size: "500x45") %>
+        <div class="textosobre3"> <font  color="blanchedalmond" face="Titillium Web" style=font-size:170% >Ofertas Exclusivas para tí</font></div>
+    </div>
 </div>
 
 <div class="row">
@@ -34,10 +36,13 @@
 <% end %>
 
 <% if not usuario_actual %>
-    <h1> Recurso prohibido o usted no está autenticado. Por favor inicie sesión </h1>
+    <div class="noauten">
+        <h1>Recurso prohibido o usted no está autenticado...</h1>
+        <h2>Por favor inicie sesión</h2>
+    </div>
     <form action="/sessions/new" method="post">
     <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
     <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Iniciar Sesión">
+    <!-- <input type="submit" value="Iniciar Sesión"> -->
     </form>
 <% end %>

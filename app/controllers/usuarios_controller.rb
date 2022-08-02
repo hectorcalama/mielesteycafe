@@ -9,4 +9,5 @@ class UsuariosController < ApplicationController
 
   def edit
   end
+
 end

@@ -1,9 +1,14 @@
+<h1>Registros#new</h1>
+<p>Find me in app\views\registros\new.html.erb</p>
+
+<!-- Acá va el formulario -->
+
 <div class="textoimagen">
     <%= image_tag("Brochazo01.png", size: "500x45") %>
-    <div class="textosobre2"> <font  color="blanchedalmond" face="Titillium Web" style=font-size:170%>Iniciar Sesión</font></div>
+    <div class="textosobre2"> <font  color="blanchedalmond" face="Titillium Web" style=font-size:170%>Registro Clientes</font></div>
 </div>
 
-<form action="/sessions" method="post">
+<form action="/registros" method="get">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <div class="nuevalabel">
         <label for="email_usuario">Correo Electrónico:</label>
