@@ -7,25 +7,44 @@
 </div></b>
 <%= image_tag("Paginaenconstruccion01.jpg", size: "500x200", style: "margin-left: 100px" ) %>
 
-<!--
-<div class="row">
+<!-- LISTADO DE PRODUCTOS CRUD -->
 
-<% @productos.each do |p| %>
-<div class="col-sm-1">
-
-    <div class="card p-2">
-        <%= image_tag(p.imagen_producto) %>
-        <div class="card-body">
-            <p class="card-title"><%= p.nom_producto %></p>
-            <p class="card-marca"><%= p.marca_producto %></p>
-            <p class="card-text"><%= p.describe_producto %></p>
-            <div id="precio">
-                <h4>$ <%= number_with_delimiter(Integer(p.precio_venta*(0.01*(100-p.descto_especial))), delimiter: ".") %></h4>
-            </div>
-        </div>
-    </div>
+<table class="table table-striped">
+    <thead>
+        <tr style="color: orangered">
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Categoría</th>
+            <th>Marca</th>
+            <th>Imagen</th>
+            <th>Cód. Barra</th>
+            <th>Inventario Mínimo</th>
+            <th>Precio Venta</th>
+            <th>%Factor Descto.</th>
+            <th>Stock?</th>
+        </tr>
+    </thead>
     
-</div>
-<% end %>
-</div> -->
+    <% @productos.each do |prod| %>
+    <tr>
+        <th scope="row"><%= prod.cod_producto %></th>
+        <td><%= prod.nom_producto %>
+        <td><%= prod.describe_producto %>
+        <td><%= prod.categ_producto %>
+        <td><%= prod.marca_producto %>
+        <td><%= prod.imagen_producto %>
+        <td><%= prod.cod_barra_producto %>
+        <td><%= prod.inven_minimo %>
+        <td><%= prod.precio_venta %>
+        <td><%= prod.descto_especial %>
+        <td><%= prod.vigencia_producto %>
+        <td>
+            <%= link_to "Mostrar" %>
+            <%= link_to "Editar" %>
+            <%= link_to "Eliminar" %>
+        </td>
+    </tr>
+    <% end %>
+</table>
 

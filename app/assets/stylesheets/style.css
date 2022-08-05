@@ -127,7 +127,8 @@ footer {
   margin-bottom:0;
   color:maroon;
   font-family:Titillium Web, Arial, Verdana;
-  font-size:100%
+  font-size:100%;
+  text-align: center;
 }
 
 .team-boxed .people {
@@ -232,7 +233,7 @@ footer {
   color:maroon;
 }
 
-.col-sm-1{
+.col-sm-1 {
   margin-top: 10px;
   margin-right: 100px;
 }
@@ -264,6 +265,13 @@ footer {
   transform: translate(-50%, -50%);
 }
 
+.container .intro {
+  color:maroon;
+  font-family:Titillium Web, Arial, Verdana;
+  font-size:130%;
+  text-align: center;
+  margin-left: 270px;
+}
 .container-fluid{
   font-weight: bold;
   display: inline-block;
@@ -366,4 +374,24 @@ a:link{
 
 .btn-outline-dark{
   font-family: Titillium Web, Arial, Verdana;
+}
+
+.labelreg{
+  margin-top: 5px;
+  font-weight: bold;
+  display: inline-block;
+  font-size:100%;
+  font-family: Titillium Web, Arial, Verdana;
+  color:maroon;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.datoreg{
+  font-weight: bold;
+  display: block;
+  font-family: Titillium Web, Arial, Verdana;
+  color:maroon;
+  text-align: left;
+  margin-left: 0px;
 }
