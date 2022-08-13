@@ -8,7 +8,7 @@ Formulario de Registro de Clientes / Administradores-->
     <div class="textosobre2"> <font  color="blanchedalmond" face="Titillium Web" style=font-size:170%>Registro Clientes</font></div>
 </div><br>
 
-<!--  <form action="/" method="post"> -->
+
 <%= form_for @user do |fm| %> 
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     
@@ -514,5 +514,4 @@ Formulario de Registro de Clientes / Administradores-->
         <button type="submit" name="Log In" class="btn btn-warning" style="margin-left:80px">Ingresar Registro </button>
     </div>
 
-<!-- </form> -->
-<% end %>  
+<% end %>

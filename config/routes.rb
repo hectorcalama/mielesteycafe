@@ -18,19 +18,27 @@ Rails.application.routes.draw do
   get 'webs/descubre'
   get 'webs/privado'
   
-  #get 'registros/new'
-  #post 'registros/create'
-  #post 'registros/create'
+#  get 'registros/new'
+#  get 'usuarios/new'
+#  post 'registros/create'
+#  post 'usuarios/create'
 
 
- # Proceso de ingreso de registro
- get "registros", to: "registros#new"
- post "usuarios", to: "registros#create"
- post "registros", to: "registros#create"
+#  Proceso de ingreso de registro
+  get '/registros/new', to: 'registros#new'
+  get '/usuarios', to: 'usuarios#new'
+  post '/registros', to: 'registros#create'
+  #post '/usuarios/new', to: 'registros#create'
+
+  get '/producto/:id/edit', to: 'productos#edit', as: 'editar_producto'
+  get '/producto/:id', to: 'productos#show', as: 'producto'
+  patch '/producto/:id', to: 'productos#update'
+  put '/producto/:id', to: 'productos#update'
 
   resources :sessions, only: [:new, :create, :destroy]
   resources :usuarios, only: [:show]
   resources :registros, only: [:new, :create]
+  resources :productos
 
   resources :contactos
   match "/" => "webs#home", via: [:get]

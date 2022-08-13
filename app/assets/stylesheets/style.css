@@ -60,7 +60,7 @@ footer {
     font-family: Titillium Web, Arial, Verdana; 
 }
 
-.card-title{
+.card-title {
   color: #C70039;
   font-family: Titillium Web, Arial, Verdana;
   font-size: 140%;
@@ -68,7 +68,7 @@ footer {
   font-weight:bold;
 }
 
-.card-marca{
+.card-marca {
   color: rgb(43, 195, 46);
   font-family: Titillium Web;
   font-size: 130%;
@@ -76,7 +76,7 @@ footer {
   font-weight:bold;
 }
 
-.card-text{
+.card-text {
   color: black;
   font-family: Titillium Web;
   font-size: 100%;
@@ -242,14 +242,14 @@ footer {
   width: 11rem;
 }
 
-.textoimagen{
+.textoimagen {
   position: relative;
   display: block;
   left: 5%;
   text-align: center;
 }
 
-.textosobre{
+.textosobre {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -257,7 +257,7 @@ footer {
   transform: translate(-50%, -50%);
 }
 
-.textosobre2{
+.textosobre2 {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -272,14 +272,14 @@ footer {
   text-align: center;
   margin-left: 270px;
 }
-.container-fluid{
+.container-fluid {
   font-weight: bold;
   display: inline-block;
   font-family: Titillium Web, Arial, Verdana;
   color:maroon;
 }
 
-.nuevalabel{
+.nuevalabel {
   margin-top: 10px;
   font-weight: bold;
   display: block;
@@ -290,7 +290,7 @@ footer {
   margin-left: 430px;
 }
 
-.nuevacont{
+.nuevacont {
   font-weight: bold;
   display: block;
   font-family: Titillium Web, Arial, Verdana;
@@ -299,50 +299,50 @@ footer {
   margin-left: 0px;
 }
 
-.nuevabut{
+.nuevabut {
     font-weight: bold;
     font-family: "Titillium Web";
     font-size: 120%;
 }
 
-.zona{
+.zona {
   margin-top: -10px;
 }
 
-.cierra{
+.cierra {
   margin-top: -33px;
 }
 
-a:link{
+a:link {
   color: red
 }
 
-.btn-success{
+.btn-success {
   font-family: Titillium Web, Arial, Verdana;
   margin-top: 25px;
   margin-left: 50px;
 }
 
-#email_usuario{
+#email_usuario {
   margin-bottom: 5px;
   margin-top: 5px;
   width: 8cm;
   background-color: blanchedalmond;
 }
 
-#password{
+#password {
   margin-bottom: 10px;
   margin-top: 5px;
   width: 5cm;
   background-color: blanchedalmond;
 }
 
-.zonaid{
+.zonaid {
   display: flex;
   margin-top: 5px;
 }
 
-.textosobre3{
+.textosobre3 {
   position: absolute;
   top: 30%;
   left: 50%;
@@ -350,7 +350,7 @@ a:link{
   transform: translate(-50%, -50%);
 }
 
-.noauten{
+.noauten {
   width: 100%;
   display: block;
   text-align: center;
@@ -358,25 +358,25 @@ a:link{
   margin-bottom: 80px;
 }
 
-.alert-warning{
+.alert-warning {
   display: flex;
   align-items: center;
   margin-top: 20px;
 }
 
-.inicia{
+.inicia {
   margin-top: -10px;
 }
 
-.registra{
+.registra {
   margin-top: -33px;
 }
 
-.btn-outline-dark{
+.btn-outline-dark {
   font-family: Titillium Web, Arial, Verdana;
 }
 
-.labelreg{
+.labelreg {
   margin-top: 5px;
   font-weight: bold;
   display: inline-block;
@@ -387,11 +387,23 @@ a:link{
   margin-left: 10px;
 }
 
-.datoreg{
+.datoreg {
   font-weight: bold;
   display: block;
   font-family: Titillium Web, Arial, Verdana;
-  color:maroon;
+  color:red;
   text-align: left;
   margin-left: 0px;
+}
+
+label {
+  color: black;
+  font-weight: bold;
+  font-size: 100%;
+}
+
+input {
+  text-align: center;
+  font-weight: bold;
+  color: #CD0000;
 }

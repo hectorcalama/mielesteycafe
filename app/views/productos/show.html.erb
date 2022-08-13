@@ -1,0 +1,93 @@
+<!-- <h1>Productos#show</h1>
+<p>Encuentra este código en C:\RubyRailsEjercicios\mielesteycafe\app\views\productos\show.html.erb </p>
+
+Formulario de Edición de Productos / Administradores-->
+
+<div class="textoimagen">
+    <%= image_tag("Brochazo01.png", size: "500x45") %>
+    <div class="textosobre2"> <font  color="blanchedalmond" face="Titillium Web" style=font-size:170%>Muestra de Productos</font></div>
+</div><br>
+
+<%= form_for @Productos do |prd| %> 
+<div style="display: table">
+
+    <div class="labelreg">
+        <%= prd.label :Código_Producto %>
+        <div class="datoreg">
+            <%= prd.text_field :cod_producto, size: 16 %>
+        </div>
+    </div>
+
+    <div class="labelreg">
+        <%= prd.label :Nombre_Producto %>
+        <div class="datoreg">
+            <%= prd.text_field :nom_producto, size: 44 %>
+        </div>
+    </div>
+    
+    <div class="labelreg">
+        <%= prd.label :Descripción_Producto %>
+        <div class="datoreg">
+            <%= prd.text_field :describe_producto, size: 195 %>
+        </div>
+    </div>
+    
+    <div class="labelreg">
+        <%= prd.label :Categoría_Producto %>
+        <div class="datoreg">
+            <%= prd.text_field :categ_producto, size: 16 %>
+        </div>
+    </div>
+    
+    <div class="labelreg">
+        <%= prd.label :Marca_Producto %>
+        <div class="datoreg">
+            <%= prd.text_field :marca_producto, size: 44 %>
+        </div>
+    </div>
+
+    <div class="labelreg">
+        <%= prd.label :Archivo_Imagen_Producto %>
+        <div class="datoreg">
+            <%= prd.text_field :imagen_producto, size: 40 %>
+        </div>
+    </div>
+
+    <div class="labelreg">
+        <%= prd.label :Código_Barra %>
+        <div class="datoreg">
+            <%= prd.text_field :cod_barra_producto, size: 30 %>
+        </div>
+    </div>
+
+    <div class="labelreg">
+        <%= prd.label :Inventario_Mínimo %>
+        <div class="datoreg">
+            <%= prd.number_field :inven_minimo, size: 5 %>
+        </div>
+    </div>
+
+    <div class="labelreg">
+        <%= prd.label :Precio_Venta_Bruto %>
+        <div class="datoreg">
+            <%= prd.number_field :precio_venta, size: 24 %>
+        </div>
+    </div>
+
+    <div class="labelreg">
+        <%= prd.label :Factor_Descto_Promo %>
+        <div class="datoreg">
+            <%= prd.number_field :descto_especial, size: 16 %>
+        </div>
+    </div>
+
+    <div class="labelreg">
+        <%= prd.label :Vigencia_Producto %>
+        <div class="datoreg">
+            <%= prd.text_field :vigencia_producto, size: 16 %>
+        </div>
+    </div>
+
+</div>
+
+<% end %>
