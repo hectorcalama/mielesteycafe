@@ -1,13 +1,12 @@
-<!-- <h1>Productos#edit</h1>
-<p>Encuentra el código en C:\RubyRailsEjercicios\mielesteycafe\app\views\productos\edit.html.erb </p>
+<!-- <h1>Productos#show</h1>
+<p>Encuentra este código en C:\RubyRailsEjercicios\mielesteycafe\app\views\productos\show.html.erb </p>
 
-Formulario de Edición de Productos / Menú Administradores-->
+Formulario de Edición de Productos / Administradores-->
 
 <div class="textoimagen">
     <%= image_tag("Brochazo01.png", size: "500x45") %>
-    <div class="textosobre2"> <font  color="blanchedalmond" face="Titillium Web" style=font-size:170%>Administración de Productos</font></div>
+    <div class="textosobre2"> <font  color="blanchedalmond" face="Titillium Web" style=font-size:170%>Muestra de Productos</font></div>
 </div><br>
-
 
 <%= form_for @Productos do |prd| %> 
 <div style="display: table">
@@ -88,8 +87,6 @@ Formulario de Edición de Productos / Menú Administradores-->
             <%= prd.text_field :vigencia_producto, size: 16 %>
         </div>
     </div>
-
-    <button type="submit" name="Log In" class="btn btn-warning" style="margin:25px" >Actualizar </button>
 
 </div>
 

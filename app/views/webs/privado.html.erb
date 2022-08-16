@@ -1,14 +1,74 @@
 <!-- <h1>Webs#privado</h1>
-<p>Find me in app/views/webs/privado.html.erb</p> -->
+<p>Encuentra el código en C:\RubyRailsEjercicios\mielesteycafe\app/views/webs/privado.html.erb</p> -->
 
 <div class="textoimagen">
     <%= image_tag("Brochazo01.png", size: "500x45") %>
     <div class="textosobre"> <font  color="blanchedalmond" face="Titillium Web" style=font-size:170%>Control y Gestión</font></div>
 </div></b>
 
+<form action="/admins" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <div class="nuevalabel">
+        <label for="email_usuario">Correo Electrónico:</label>
+        <div class="nuevacont">
+            <input type="text" id="email_usuario" name = "email_usuario">
+        </div>
+    </div>
+    
+    <div class="nuevalabel">
+        <label for="password">Password:</label>
+        <div class="nuevacont">
+            <input type="password" id="password" name = "password">
+        </div>
+    </div>
+    
+    <div class="nuevabut">
+        <button type="submit" name="Log In" class="btn btn-warning" style="margin-left:80px">Ingresar </button>
+    </div>
+</form>
+
+
+
+<% if not usuario_actual %>
+<div>
+    <form class="inline-block" action="/admins/new" method="get">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="hidden" name="_method" value="new">
+            <input type="submit" class="btn btn-outline-success" value="Iniciar Sesión Control y Gestión">
+    </form>
+
+    <form class="inline-block" action="/registros/new" method="get">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="hidden" name="_method" value="new">
+            <input type="submit" class="btn btn-outline-danger" value="Registrarse como Administrador">
+    </form>
+</div>
+<% end %>
+
+<% if usuario_actual %>
+    <div>
+        <form action="/admins/<%=usuario_actual.id%>" method="get">
+            <div class="zona">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                <input type="hidden" name="_method" value="new">
+                <input type="submit" class="btn btn-warning" value="Zona Clientes">
+            </div>
+        </form>
+
+        <form action="/admins/<%=usuario_actual.id%>" method="post">
+            <div class="cierra">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                <input type="hidden" name="_method" value="delete">
+                <input type="submit" class="btn btn-outline-danger" value="Cerrar Sesión">
+            </div>
+        </form>
+    </div>
+<% end %> 
+
+
+
 <!-- LISTADO DE PRODUCTOS CRUD
 <%= image_tag("Paginaenconstruccion01.jpg", size: "500x200", style: "margin-left: 100px" ) %>
- -->
 
 <table class="table table-striped">
     <thead>
@@ -44,9 +104,8 @@
         <td>
             <%= link_to "Mostrar", producto_path(prod), method: :get %>
             <%= link_to "Editar", editar_producto_path(prod) %>
-            <!-- <%= link_to "Eliminar" %> -->
         </td>
     </tr>
     <% end %>
 </table>
-
+-->

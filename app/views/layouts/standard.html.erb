@@ -22,10 +22,7 @@
                     <%= image_tag("LogoEntreMielesTeCafe001.png", size: "140x140") %> 
                 </div>
             </div>    
-            <div>
-                <div id="resultado">
-
-                </div>
+            <div id="resultado">
                 <%= form_tag "/buscars/create", method: :get do %>
                 <%= text_field_tag :keyword, nil, style:"margin-bottom: -8px", placeholder: "¿Que estás buscando?..." %>
                 <div>
@@ -37,36 +34,34 @@
             </div>
         </div>
 
-            <div style="float: right">
-                <%= image_tag("Logoinsta01.jpg", size: "30x30") %>
-                <a class="text-muted" href="https://www.instagram.com/entremielesycafe/" target="_blank">
-                <b> <font color="maroon" face="Titillium Web" style=font-size:100%>Entre Mieles Té y Café</font><br></a>
-                
-                <a class="text-muted" href="https://www.facebook.com/entremielesycafe" target="_blank">
-                <b> <font color="maroon" face="Titillium Web" style=font-size:100%>Entre Mieles Té y Café</font>
-                <%= image_tag("Logoface01.png", size: "30x30") %>
-                <br></a>
+        <div style="float: right">
+            <%= image_tag("Logoinsta01.jpg", size: "30x30") %>
+            <a class="text-muted" href="https://www.instagram.com/entremielesycafe/" target="_blank">
+            <b> <font color="maroon" face="Titillium Web" style=font-size:100%>Entre Mieles Té y Café</font><br></a>
+            
+            <a class="text-muted" href="https://www.facebook.com/entremielesycafe" target="_blank">
+            <b> <font color="maroon" face="Titillium Web" style=font-size:100%>Entre Mieles Té y Café</font>
+            <%= image_tag("Logoface01.png", size: "30x30") %>
+            <br></a>
 
-                <%= image_tag("Logoinsta01.jpg", size: "30x30") %>
-                <a class="text-muted" href="https://www.instagram.com/lulan_ckackchi/" target="_blank">
-                <b> <font color="maroon" face="Titillium Web" style=font-size:100%>Lulan Ckackchi</font> <br></a>
+            <%= image_tag("Logoinsta01.jpg", size: "30x30") %>
+            <a class="text-muted" href="https://www.instagram.com/lulan_ckackchi/" target="_blank">
+            <b> <font color="maroon" face="Titillium Web" style=font-size:100%>Lulan Ckackchi</font> <br></a>
 
-                
-                <b> <font color="maroon" face="Titillium Web" style=font-size:100%>+569 5136 8576</font>
-                <%= image_tag("Logowhat01.jpg", size: "30x30") %><br>
+            
+            <b> <font color="maroon" face="Titillium Web" style=font-size:100%>+569 5136 8576</font>
+            <%= image_tag("Logowhat01.jpg", size: "30x30") %><br>
 
-                <a href="javascript: history.go(-1)" class="btn btn-outline-dark">Pág. Anterior</a>
-
-            </div>
-
-            <div>
-                <b> <font color="maroon" face="Brush Script MT" style=font-size:500%> Entre Mieles Té y Café </font></b>
-            </div>
+            <a href="javascript: history.go(-1)" class="btn btn-outline-dark">Pág. Anterior</a>
         </div>
-        </header>
 
+        <div>
+            <b> <font color="maroon" face="Brush Script MT" style=font-size:500%> Entre Mieles Té y Café </font></b>
+        </div>
+    </div>
+
+    </header>
         <nav class="navbar navbar-expand-lg navbar-light">
-        <!-- <hr size="0px" color="#ebd6ac" /> -->
         <div class="container-fluid" style="background-color:#ebd6ac">
             <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -137,7 +132,7 @@
                 
                 <div align="center"><%= image_tag("Restringe01.ico", size: "40x30") %>
                     <b><font color="maroon" face="Titillium Web" style=font-size:100%>
-                    <a class="nav-link" href="/webs/privado">Control y Gestión</a></b>
+                    <a class="nav-link" href="/sessions/new">Control y Gestión</a></b>
                     </font>
                 </div>
 
@@ -159,8 +154,6 @@
                         </div>
                     </form>
                 </div>
-
-
                 <% end %>
 
                 <% if usuario_actual %>
@@ -205,9 +198,9 @@
 
     <footer>
         <br>
-        <font color="maroon" style=font-size:120%> <b>Desarrollado por Héctor Chandía Concha - Asesoría Carlos García B.<b> </font><br>
-        <font color="brown" face="Titillium Web" style=font-size:100%> Aplicación Powered by Ruby on Rails </font>
-        <font color="firebrick" style=font-size:100%> <b>Versión 1.0 - Calama julio de 2022<b> </font>
+            <font color="maroon" style=font-size:120%> <b>Desarrollado por Héctor Chandía Concha - Asesoría Carlos García B.<b> </font><br>
+            <font color="brown" face="Titillium Web" style=font-size:100%> Aplicación Powered by Ruby on Rails </font>
+            <font color="firebrick" style=font-size:100%> <b>Versión 1.0 - Calama julio de 2022<b> </font>
         <br>
 
         <span class="material-symbols-outlined">
@@ -226,4 +219,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
+
 </html>

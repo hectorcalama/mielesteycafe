@@ -1,0 +1,41 @@
+<% if usuario_actual %>
+    <div class="zonaid">
+        <b><font color="maroon" face="Titillium Web" style=font-size:150% >
+        <p>Bienvenido <img class="rounded-circle" <%= image_tag(@user.imagen_usuario, size: "50x55") %> <%= @user.nombre_usuario %> <%= @user.apellidos_usuario %> </p></b></font>
+
+        <!--AQUI SE COLOCA EL CONTENIDO PRIVADO -->
+        <div class="textoimagen">
+            <%= image_tag("Brochazo01.png", size: "500x45") %>
+            <div class="textosobre3">
+                <font color="blanchedalmond" face="Titillium Web" style=font-size:170% >Control y Gestión</font>
+            </div>
+        </div>
+    </div>
+    <!-- MENÚ DE OPCIONES CONTROL Y GESTIÓN -->
+
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/productos/show">Control y Gestión de Productos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/admins/new">Control y Gestión de Usuarios</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Compras</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Ventas</a>
+        </li>
+    </ul>
+<% end %>
+
+<% if not usuario_actual %>
+    <div class="noauten">
+        <h1>Recurso prohibido o usted no está autenticado...</h1>
+        <h2>Por favor inicie sesión</h2>
+    </div>
+    <form action="/admins/new" method="post">
+        <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+        <input type="hidden" name="_method" value="delete">
+    </form>
+<% end %>

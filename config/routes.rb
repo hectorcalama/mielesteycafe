@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'usuarios/new'
   get 'usuarios/show'
   get 'usuarios/edit'
+  get 'admins/new'
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/update'
@@ -35,10 +36,11 @@ Rails.application.routes.draw do
   patch '/producto/:id', to: 'productos#update'
   put '/producto/:id', to: 'productos#update'
 
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :usuarios, only: [:show]
-  resources :registros, only: [:new, :create]
+  resources :sessions #, only: [:new, :create, :destroy]
+  resources :usuarios #, only: [:show]
+  resources :registros #, only: [:new, :create]
   resources :productos
+  resources :admins
 
   resources :contactos
   match "/" => "webs#home", via: [:get]

@@ -36,6 +36,8 @@ class WebsController < ApplicationController
 
   def privado
     @productos = Producto.all
+#    @usuarios = Usuario.all
+    @user = Usuario.where tipo_usuario: "Admin"
   end
 
 end
